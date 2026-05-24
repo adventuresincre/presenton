@@ -1,0 +1,6 @@
+{
+  "description": "Open-source Offering Memorandum (OM) template for commercial real estate investment sales. Asset-class-aware layouts for cover, investment highlights, property summary, location, demographics, rent roll, T-12 / pro forma, sale and lease comps, and disclaimers. Built by Adventures in CRE as a service to the industry.",
+  "ordered": true,
+  "default": false,
+  "icon_weight": "regular"
+}

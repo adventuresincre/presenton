@@ -237,6 +237,13 @@ import TitleDescriptionFourChartsSixBulletsLayout, { Schema as TitleDescriptionF
 
 
 // TODO: Step 2: Import template settings Here (like the ones below)
+// Real Estate Offering Memorandum (OM) templates
+import OmCoverSlide, { Schema as OmCoverSchema, slideLayoutId as OmCoverId, slideLayoutName as OmCoverName, slideLayoutDescription as OmCoverDesc } from "./real-estate-om/OmCoverSlide";
+import OmInvestmentHighlightsSlide, { Schema as OmInvestmentHighlightsSchema, slideLayoutId as OmInvestmentHighlightsId, slideLayoutName as OmInvestmentHighlightsName, slideLayoutDescription as OmInvestmentHighlightsDesc } from "./real-estate-om/InvestmentHighlightsSlide";
+import OmPropertySummarySlide, { Schema as OmPropertySummarySchema, slideLayoutId as OmPropertySummaryId, slideLayoutName as OmPropertySummaryName, slideLayoutDescription as OmPropertySummaryDesc } from "./real-estate-om/PropertySummarySlide";
+import OmLocationAerialSlide, { Schema as OmLocationAerialSchema, slideLayoutId as OmLocationAerialId, slideLayoutName as OmLocationAerialName, slideLayoutDescription as OmLocationAerialDesc } from "./real-estate-om/LocationAerialSlide";
+import OmFinancialSummarySlide, { Schema as OmFinancialSummarySchema, slideLayoutId as OmFinancialSummaryId, slideLayoutName as OmFinancialSummaryName, slideLayoutDescription as OmFinancialSummaryDesc } from "./real-estate-om/FinancialSummarySlide";
+
 // Template template settings
 import generalSettings from "./general/settings.json";
 import modernSettings from "./modern/settings.json";
@@ -251,6 +258,7 @@ import educationSettings from "./Education/settings.json";
 import productOverviewSettings from "./ProductOverview/settings.json";
 import reportSettings from "./Report/settings.json";
 import pitchDeckSettings from "./pitch-deck/settings.json";
+import realEstateOmSettings from "./real-estate-om/settings.json";
 
 
 // Helper to create template entry
@@ -317,6 +325,14 @@ export const reportTemplates: TemplateWithData[] = [
     createTemplateEntry(PerformanceSnapshotSlide, RepPerformanceSnapshotSchema, RepPerformanceSnapshotId, RepPerformanceSnapshotName, RepPerformanceSnapshotDesc, "report", "TitleMetricsSlide"),
     createTemplateEntry(ReportServicesSlide, RepServicesSchema, RepServicesId, RepServicesName, RepServicesDesc, "report", "TitleWorkflowWithTitleDescriptionSlide"),
     createTemplateEntry(ReportTeamSlide, RepTeamSchema, RepTeamId, RepTeamName, RepTeamDesc, "report", "HorizontalHeightSpanningImagesWithTitleSlide"),
+];
+
+export const realEstateOmTemplates: TemplateWithData[] = [
+    createTemplateEntry(OmCoverSlide, OmCoverSchema, OmCoverId, OmCoverName, OmCoverDesc, "real-estate-om", "OmCoverSlide"),
+    createTemplateEntry(OmInvestmentHighlightsSlide, OmInvestmentHighlightsSchema, OmInvestmentHighlightsId, OmInvestmentHighlightsName, OmInvestmentHighlightsDesc, "real-estate-om", "InvestmentHighlightsSlide"),
+    createTemplateEntry(OmPropertySummarySlide, OmPropertySummarySchema, OmPropertySummaryId, OmPropertySummaryName, OmPropertySummaryDesc, "real-estate-om", "PropertySummarySlide"),
+    createTemplateEntry(OmLocationAerialSlide, OmLocationAerialSchema, OmLocationAerialId, OmLocationAerialName, OmLocationAerialDesc, "real-estate-om", "LocationAerialSlide"),
+    createTemplateEntry(OmFinancialSummarySlide, OmFinancialSummarySchema, OmFinancialSummaryId, OmFinancialSummaryName, OmFinancialSummaryDesc, "real-estate-om", "FinancialSummarySlide"),
 ];
 
 export const pitchDeckTemplates: TemplateWithData[] = [
@@ -577,6 +593,13 @@ export const templates: TemplateLayoutsWithSettings[] = [
         description: pitchDeckSettings.description,
         settings: pitchDeckSettings as TemplateGroupSettings,
         layouts: pitchDeckTemplates,
+    },
+    {
+        id: "real-estate-om",
+        name: "Offering Memorandum (CRE)",
+        description: realEstateOmSettings.description,
+        settings: realEstateOmSettings as TemplateGroupSettings,
+        layouts: realEstateOmTemplates,
     },
     {
         id: "neo-general",
